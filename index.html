@@ -1,80 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <style>
+    body {
+        display: block;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
     #columns{
-     column-width:350px;
-     column-gap: 15px;
-     }
-   #columns figure{
-     display: inline-block;
-     border:1px solid rgba(0,0,0,0.2);
-     margin:0;
-     margin-bottom: 15px;
-     padding:10px;
-     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
-     }
-   #columns figure img{
-     width:100%;
-     }
-   #columns figure figcaption{
-     border-top:1px solid rgba(0,0,0,0.2);
-     padding:10px;
-     margin-top:11px;
-     }
+        max-width: 1185px;
+        margin: 0 auto;
+        min-height: 80vh;
+    }
+
+    ul{
+        text-align: center;
+        margin-top: 100px;
+        -webkit-padding-start: 0px;
+    }
+
+    li.card{
+        display: inline-block;
+        width: 350px;
+        margin: 20px;
+        box-shadow: 0 20px 20px rgba(0,0,0,.1);
+
+    }
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    #header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 4rem;
+        z-index: 5;
+        background-color: white;
+        padding: 20px;
+    }
+    #header .logo {
+        flex-grow: 1;
+    }
+    #header .logo .a{
+        display: inline-block;
+        padding: 0 1rem;
+        margin-left: -1rem;
+        text-decoration: none;
+        border: none;
+        display: inline-block;
+        line-height: 4rem;
+        height: 4rem;
+        overflow: hidden;
+        margin: 0;
+    }
+    #header .site-title {
+        display: inline-block;
+        line-height: 4rem;
+        height: 4rem;
+        overflow: hidden;
+        margin: 0;
+    }
+    .main-navigation {
+        flex-grow: 1;
+        text-align: right;
+
+    }
+
 
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div id="columns">
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
-       <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
-     </figure>
+        <header id="header" role="banner">
+            <div class="logo">
+                <a href="https://christine0916.github.io/" rel="home">
+                    <p class="site-title">CHRISTINE</p>
+    			</a>
+            </div>
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/pro">About</a></li>
+                        <li><a href="/choose-account">Work</a></li>
+                        <li><a href="/login">Contact</a></li>
+                    </ul>
+            </nav>
+        </header>
 
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg">
-       <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
-     </figure>
+        <div id="columns">
+            <ul>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="https://soomgo.s3.ap-northeast-2.amazonaws.com/static/img/home/index_thumbnail_1.png">
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="https://christine0916.github.io/">
+                        <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                    </a>
+                </li>
+            </ul>
 
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg">
-       <figcaption>Belle, based on 1770’s French court fashion</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg">
-       <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
-       <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg">
-       <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg">
-       <figcaption>Snow White, based on 16th century German fashion</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg">
-       <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
-     </figure>
-
-     <figure>
-       <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg">
-       <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
-     </figure>
-   </div>
-
+        </div>
 
 </body>
 </html>
