@@ -11,6 +11,42 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    body {
+        display: block;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    #columns{
+        max-width: 1185px;
+        margin: 0 auto;
+        min-height: 80vh;
+    }
+
+    ul{
+        text-align: center;
+        margin-top: 100px;
+        -webkit-padding-start: 0px;
+    }
+
+    li.card{
+        display: inline-block;
+        width: 350px;
+        margin: 20px;
+        box-shadow: 0 20px 20px rgba(0,0,0,.1);
+        transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    }
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+    .card:hover{
+        box-shadow: 0 40px 40px rgba(0,0,0,.16);
+        transform: translate(0,-20px);
+        transition-delay: 0s !important;
+    }
+
     #header {
         display: flex;
         position: fixed;
@@ -52,7 +88,10 @@
     .main-navigation {
         flex-grow: 1;
         text-align: right;
-
+        color: black;
+    }
+    .menu {
+        color: black;
     }
 
     .title-text{
