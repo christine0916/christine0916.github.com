@@ -35,11 +35,16 @@
         width: 350px;
         margin: 20px;
         box-shadow: 0 20px 20px rgba(0,0,0,.1);
-
+        transition: all 250ms cubic-bezier(.02, .01, .47, 1);
     }
     img {
         width: 100%;
         vertical-align: top;
+    }
+    .card:hover{
+        box-shadow: 0 40px 40px rgba(0,0,0,.16);
+        transform: translate(0,-20px);
+        transition-delay: 0s !important;
     }
 
     #header {
@@ -99,8 +104,8 @@
             </div>
             <nav id="site-navigation" class="main-navigation" role="navigation">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/pro">About</a></li>
-                        <li><a href="/choose-account">Work</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="https://christine0916.github.io/">Work</a></li>
                         <li><a href="/login">Contact</a></li>
                     </ul>
             </nav>
